@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Lock } from "lucide-react";
 
 interface LoginProps {
   onLogin: () => void;
@@ -89,9 +89,11 @@ const Login = ({ onLogin }: LoginProps) => {
           </Button>
         </form>
 
-        <div className="mt-6 text-center text-sm text-[#AFAFAF]">
-          <p>Email: cliente@nilemi.com</p>
-          <p>Senha: nilemi</p>
+        <div className="mt-6 text-center">
+          <div className="flex items-center justify-center space-x-2 text-[#AFAFAF]">
+            <Lock className="w-4 h-4" />
+            <span className="text-sm">Exclusivo para membros</span>
+          </div>
         </div>
       </div>
     </div>
